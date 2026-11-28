@@ -1,28 +1,22 @@
-import { Link } from 'react-router-dom'
+
+import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <nav
-      aria-label="Main navigation"
-      className="mb-8 flex flex-wrap gap-x-6 gap-y-2 border-b border-gray-200 pb-3 text-sm"
-    >
-      <Link to="/dashboard" className="text-gray-700 hover:text-green-700">
-        Dashboard
+    <nav className="flex justify-between items-center px-8 py-4 bg-white shadow-md">
+
+      <Link to="/" className="text-2xl font-bold text-green-700">
+        DirectMarket
       </Link>
-      <Link to="/marketplace" className="text-gray-700 hover:text-green-700">
-        Marketplace
-      </Link>
-      <Link to="/my-products" className="text-gray-700 hover:text-green-700">
-        My Products
-      </Link>
-      <Link to="/orders" className="text-gray-700 hover:text-green-700">
-        Orders
-      </Link>
-      <Link to="/login" className="text-gray-700 hover:text-green-700">
-        Login
-      </Link>
+
+      <div className="flex gap-8 font-medium text-gray-700">
+        <Link to="/" className="hover:text-green-600">Home</Link>
+        <Link to="/login" className="hover:text-green-600">Login</Link>
+        <Link to="/register" className="hover:text-green-600">Register</Link>
+      </div>
+
     </nav>
-  )
+  );
 }
 
-export default Navigation
+export default Navigation;
